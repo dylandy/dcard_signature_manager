@@ -4,12 +4,14 @@
   "name": "dcard signature",
   "description": "Automatic add signature to textarea in dcard page",
   "version": "1.0",
-
-  "permissions": [
-    "http://www.dcard.tw/",
-  ],
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "option.html"
-  }
+  },
+  "content_scripts":[
+    {
+      "matches" : ["http://www.dcard.tw/*" , "https://www.dcard.tw/*"],
+      "js" : ["content.js"]
+    }
+  ]
 }
