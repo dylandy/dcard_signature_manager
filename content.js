@@ -23,5 +23,12 @@ jQuery(function($){
       $('.float-comment textarea').val(result.signature);
     });
   });
+  $("body").on("click" , ".navbar-right:eq(2)" , function(){
+    setTimeout(function(){
+      chrome.storage.sync.get( "signature" , function(result){
+        $('.float-comment textarea').val(result.signature);
+      });
+    } , 2000);
+  });
 });
 
