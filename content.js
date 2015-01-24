@@ -13,8 +13,9 @@ jQuery(function($){
   get_signature();
   $("body").on("click" , "#side item" , get_signature);
   $("body").on("click" , ".list > div > a" , function(){
-    sleep(2000);
-    get_signature();
+    setTimeout(function() {
+      get_signature();
+    }, 2000);
   });
   $("body").on("click" , ".list > div:eq(2) > button" , get_signature);
 });
